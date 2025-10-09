@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi-red)
 ![ARM NN](https://img.shields.io/badge/ARM%20NN-v24.02-blue)
 ![TensorFlow Lite](https://img.shields.io/badge/TensorFlow%20Lite-v2.13.0-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-CC--BY%204.0-blue)
 
 The following guide covers the installation and build process of **ARM NN** with TensorFlow Lite model support and the **PyArmNN** library on a Raspberry Pi, along with all the necessary libraries for full functionality.
 The guide was created in July 2025 and tested on Debian 12 Bookworm 64-bit, using specific library and tool versions.
