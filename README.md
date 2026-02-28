@@ -1,4 +1,4 @@
-# 🧠 ARM NN & PyArmNN Installation Guide with TensorFlow Lite Support (Raspberry Pi)
+#  ARM NN & PyArmNN Installation Guide with TensorFlow Lite Support (Raspberry Pi)
 
 ![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi-red)
 ![ARM NN](https://img.shields.io/badge/ARM%20NN-v24.02-blue)
@@ -13,7 +13,7 @@ The guide was created in July 2025 and tested on Debian 12 Bookworm 64-bit, usin
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 1. [Introduction](#introduction)
 2. [Dependencies](#dependencies)
@@ -30,14 +30,14 @@ The guide was created in July 2025 and tested on Debian 12 Bookworm 64-bit, usin
 
 ---
 
-## 🧩 Introduction
+##  Introduction
 
 This guide explains how to **build and install ARM NN** with **TensorFlow Lite (TFLite)** and **PyArmNN** support on Raspberry Pi.  
 The process was tested on **Debian 12 Bookworm (64-bit)** using specific versions of libraries and tools.
 
 ---
 
-## ⚙️ Dependencies
+##  Dependencies
 
 Update and install the required tools:
 
@@ -78,7 +78,7 @@ cd tensorflow && git checkout v2.13.0 && cd ..
 
 ---
 
-## 🏗️ Build ARM Compute Library
+##  Build ARM Compute Library
 
 ```bash
 cd $BASEDIR/ComputeLibrary
@@ -87,7 +87,7 @@ scons -j2 extra_cxx_flags="-fPIC" Werror=0 debug=0 asserts=0 neon=1 os=linux arc
 
 ---
 
-## 🧱 Build Boost
+##  Build Boost
 
 ```bash
 cd $BASEDIR
@@ -116,7 +116,7 @@ b2 --build-dir=$BASEDIR/boost_1_74_0/build -j2   toolset=gcc link=static cxxflag
 
 ---
 
-## 📦 Build Flatbuffers
+##  Build Flatbuffers
 
 ```bash
 cd $BASEDIR/flatbuffers
@@ -127,7 +127,7 @@ sudo make install
 
 ---
 
-## 🧬 Build TensorFlow Lite
+##  Build TensorFlow Lite
 
 ```bash
 cd $BASEDIR/tensorflow
@@ -137,7 +137,7 @@ mkdir -p $BASEDIR/armnn-deps
 
 ---
 
-## 🏗️ Build ARM NN
+##  Build ARM NN
 
 Edit `GlobalConfig.cmake` and remove `-Werror`:
 
@@ -156,7 +156,7 @@ make -j2
 
 ---
 
-## ✅ Verify Build
+##  Verify Build
 
 ```bash
 cd $BASEDIR/armnn/build
@@ -167,7 +167,7 @@ If tests return **Success** (with up to 3 skipped), the build is valid.
 
 ---
 
-## 🐍 Install PyArmNN
+##  Install PyArmNN
 
 ```bash
 python3 -m venv ~/armnn-venv
@@ -178,7 +178,7 @@ deactivate
 
 ---
 
-## 🧠 Run Inference on TensorFlow Lite Model
+##  Run Inference on TensorFlow Lite Model
 
 Download a model and labels:
 
@@ -231,12 +231,12 @@ Simply `import pyarmnn` into your Python code and enjoy fast inference!
 ## 👤 Author
 
 **Dimitris Vatousis**  
-📎 [GitHub: TsipiDev](https://github.com/TsipiDev)  
-💼 [LinkedIn](https://www.linkedin.com/in/dimitris-vatousis/)  
+ [GitHub: TsipiDev](https://github.com/TsipiDev)  
+ [LinkedIn](https://www.linkedin.com/in/dimitris-vatousis/)  
 
 ---
 
-## 🪪 License
+##  License
 
 This guide is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
 You are free to share and adapt this material for any purpose, even commercially,  
