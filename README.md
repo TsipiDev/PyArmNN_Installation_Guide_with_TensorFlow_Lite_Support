@@ -220,7 +220,7 @@ Predicted: Egyptian cat (confidence: 0.217)
 
 ---
 
-## 🏁 Conclusion
+##  Conclusion
 
 You can now run **any TensorFlow Lite model** optimized with **PyArmNN** and **ARM NN software acceleration** on your Raspberry Pi.
 
